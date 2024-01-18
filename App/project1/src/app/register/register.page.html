@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true">
+  <h1 class="heading">👋 Kayıt Ol<br><br></h1>
+  <p class="para">Devam etmek için bilgilerinizi girin</p>
+  <form>
+    <ion-item lines="none" class="ion-item">
+      <fieldset class="input-item">
+        <legend>E-Mail</legend>
+        <ion-input [(ngModel)]="email" name="email" type="text" [ngModelOptions]="{ standalone: true }"></ion-input>
+      </fieldset>
+    </ion-item>
+    <ion-item lines="none" class="ion-item">
+      <fieldset class="input-item">
+        <legend>Şifre</legend>
+        <ion-input [(ngModel)]="password" name="password" type="password" placeholder="*******" [ngModelOptions]="{ standalone: true }"></ion-input>
+      </fieldset>
+    </ion-item>
+    <ion-item lines="none" class="ion-item">
+      <fieldset class="input-item">
+        <legend>Şifre Tekrar</legend>
+        <ion-input [(ngModel)]="confirmPassword" name="confirmPassword" type="password" placeholder="*******" [ngModelOptions]="{ standalone: true }"></ion-input>
+      </fieldset>
+    </ion-item>
+    <ion-button class="register-button"  expand="block">Kayıt Ol</ion-button>
+  </form>
+</ion-content>

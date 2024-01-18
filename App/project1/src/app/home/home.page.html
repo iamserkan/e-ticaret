@@ -1,0 +1,21 @@
+<ion-content [fullscreen]="true">
+  <h1 class="heading">👋 Hoşgeldiniz<br><br></h1>
+   <p class="para">Devam Etmek İçin Giriş Yapınız</p>
+   <form >
+     <ion-item lines="none" class="ion-item">
+       <fieldset  class="input-item">
+         <legend>E-Mail</legend> 
+         <ion-input [(ngModel)]="email" name="email" type="text" [ngModelOptions]="{ standalone: true }"></ion-input>
+       </fieldset>
+     </ion-item>
+     <ion-item lines="none" class="ion-item">
+       <fieldset class="input-item">
+         <legend>Şifre</legend> 
+         <ion-input [(ngModel)]="password" name="password" type="password" placeholder="*******" [ngModelOptions]="{ standalone: true }"></ion-input>
+       </fieldset>
+     </ion-item>
+     <p class="forget-text"></p>
+     <ion-button class="login-button" (click)="login()" expand="block">Giriş Yap</ion-button>
+   </form>
+ </ion-content>
+ 

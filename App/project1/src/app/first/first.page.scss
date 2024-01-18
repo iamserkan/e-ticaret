@@ -1,0 +1,90 @@
+ ion-toolbar{
+    text-align: center;
+    --background:white;
+ }
+ ion-content{
+    --background:#e6e6e6;
+  }
+  
+  h1{
+    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size:large;
+    margin-top: 10%;
+  }
+  .background-image {
+    width: 30%;
+    height:30%;
+    display: inline-block;
+
+  }
+  .container{
+    text-align: center;
+
+  }
+  
+  .button-container {
+    --background:#e6e6e6;
+    position: fixed;
+    top:60%;
+    left:1%;
+    width: 100%; 
+    text-align: center;
+  }
+  .signup-button{
+    --background:#7C2278;
+  }
+  .login-button, .signup-button {
+    font-family: 'Roboto', sans-serif;
+    width: 48%;
+    height: 80%; 
+    margin: 5px;
+    border-radius: 25px; 
+  }
+  @media (max-width: 531px) {
+    .login-button, .signup-button {
+      width: 45%; 
+    }
+    .button-container {
+        left:3%;
+        top:50%; 
+      }
+  
+}
+@media (min-width: 443px) {
+    .login-button, .signup-button {
+      width: 45%; 
+    }
+    .button-container {
+        left:3%;
+        top:80%; 
+      }
+     
+      
+}
+@media (min-width: 585px) {
+    .login-button, .signup-button {
+      width: 45%; 
+    }
+    .button-container {
+        left:3%;
+        top:80%; 
+      }
+     
+      
+}
+
+@media (min-width: 800px) {
+    h1{
+      
+        margin-top: 5%;
+      }
+    .background-image {
+        width: 20%;
+        height:20%;
+        display: inline-block;
+    
+      }
+      
+}

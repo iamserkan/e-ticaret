@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Uygulama Adı
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+  <h1>Stoklarını Artık Kolaylıkla Takip Edebilirsin</h1>
+  <ion-img class="background-image" src="../../assets/shopping.gif"></ion-img></div>
+  <ion-item lines="none" class="button-container">
+  <ion-button (click)="navigate('home')" shape="round" class="login-button">Giriş Yap</ion-button>
+    <ion-button (click)="navigate('register')" shape="round"class="signup-button">Üye Ol</ion-button>
+  </ion-item>
+</ion-content>

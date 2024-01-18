@@ -1,0 +1,45 @@
+.heading {
+    font-size: 32px;
+    font-weight: bold;
+    padding-left: 20px;
+    margin-top: 70px;
+    margin-bottom: -60px;
+  }
+  
+  .para {
+    font-size: 22px;
+    font-weight: 500;
+    padding-left: 20px;
+    margin-bottom: 70px;
+    color: #A6ABB1;
+  }
+  
+  .input-item {
+    padding-left: 20px;
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid #e2e2e2;
+    height: 70px;
+  }
+  
+  .ion-item {
+    margin-top: 20px;
+  }
+  
+  .register-button {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 50px;
+    --border-radius: 12px;
+    margin-top: 60px;
+    --box-shadow: none;
+  }
+  
+  ion-content {
+    --background: #f4f4f4;
+  }
+  
+  .ion-item {
+    --background: #f4f4f4;
+  }
+  
