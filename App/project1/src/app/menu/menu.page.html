@@ -1,20 +1,83 @@
-<ion-tabs>
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="home">
-      <ion-icon name="play-circle"></ion-icon>
-      Listen Now
-    </ion-tab-button>
-    <ion-tab-button tab="radio">
-      <ion-icon name="radio"></ion-icon>
-      Radio
-    </ion-tab-button>
-    <ion-tab-button tab="library">
-      <ion-icon name="library"></ion-icon>
-      Library
-    </ion-tab-button>
-    <ion-tab-button tab="search">
-      <ion-icon name="search"></ion-icon>
-      Search
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button ></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Uygulama Adı
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="main-content">
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-col-4">
+        <ion-card routerLink="/products">
+          <ion-card-header>
+            <ion-card-subtitle>Ürün Yönetimi</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-icon name="bag-outline"></ion-icon>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col class="ion-col-4">
+        <ion-card routerLink="/stock">
+          <ion-card-header>
+            <ion-card-subtitle>Stok Yönetimi</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-icon name="cube-outline"></ion-icon>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="ion-col-4">
+        <ion-card routerLink="/sales">
+          <ion-card-header>
+            <ion-card-subtitle>Satış İşlemleri</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-icon name="cash-outline"></ion-icon>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col class="ion-col-4">
+        <ion-card routerLink="/reports">
+          <ion-card-header>
+            <ion-card-subtitle>Raporlar</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-icon name="document-text-outline"></ion-icon>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="ion-col-4">
+        <ion-card routerLink="/integrations">
+          <ion-card-header>
+            <ion-card-subtitle>Entegrasyonlar</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-icon name="cloud-outline"></ion-icon>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col class="ion-col-4">
+        <ion-card class="supplier" routerLink="/suppliers">
+          <ion-card-header>
+            <ion-card-subtitle>Tedarikçi İşlemleri</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-icon name="people-outline"></ion-icon>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

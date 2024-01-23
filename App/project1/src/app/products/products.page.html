@@ -1,0 +1,35 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">Ürün Yönetimi</ion-title>
+    <ion-buttons slot="end" (click)="openModal()">
+      <ion-button>
+        <ion-icon name="add"></ion-icon> Ürün Ekle
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+ 
+  <ion-grid class="product-grid">
+    <ion-row class="header-row">
+      <ion-col size="2"><strong>ID</strong></ion-col>
+      <ion-col size="4"><strong>Ürün Adı</strong></ion-col>
+      <ion-col size="3"><strong>Fiyat</strong></ion-col>
+      <ion-col size="3"><strong>Stok Miktarı</strong></ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let urunler of mongoData" class="data-row">
+      <ion-col size="2">{{ urunler.id }}</ion-col>
+      <ion-col size="4">{{ urunler.name }}</ion-col>
+      <ion-col size="3">{{ urunler.price }}</ion-col>
+      <ion-col size="3">{{ urunler.stock }}</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+        <!-- Örneğin: <ion-input type="file" (change)="onFileChange($event)"></ion-input> -->

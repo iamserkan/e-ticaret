@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
-import { ApiService } from '../services/api.service';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -9,36 +7,30 @@ import { ApiService } from '../services/api.service';
 })
 export class HomePage {
 
-  email: string='';
-  password: string='';
-  
-  constructor(private navCtrl:NavController,private http: HttpClient,private apiService:ApiService) { }
-  
+  private apiUrl = 'http://localhost:3001/api/login';
+  email: string = '';
+  password: string = '';
 
-  ngOnInit() {
-  }
-  login() {
+  constructor(private http: HttpClient) {}
+
+  login(): void {
     if (this.email && this.password) {
-      // AuthenticationService kullanarak giriş işlemini gerçekleştir
-      this.apiService.login(this.email, this.password).subscribe(
-        (response) => {
-          // Başarılı giriş durumu
-          console.log('Login successful');
-          // Token'ı saklamak veya başka işlemler gerçekleştirmek için burada kullanabilirsiniz.
+      const loginPayload = { email: this.email, password: this.password };
 
-          // Örneğin, başka bir sayfaya yönlendirme
-          this.navCtrl.navigateRoot('/dashboard');
+      this.http.post(this.apiUrl, loginPayload).subscribe(
+        (data) => {
+          console.log(data);
+          // İstediğiniz şekilde yanıtı işleyin
         },
-        (error) => {
-          // Giriş hatası durumu
-          console.error('Login failed', error);
-          // Hata durumunu kullanıcıya bildirebilir veya başka işlemler gerçekleştirebilirsiniz.
-        }
+        (err: any) => console.log(err)
       );
+    } else {
+      console.error('E-posta ve şifre gereklidir.');
     }
   }
+  }
   
 
-}
+
 
 

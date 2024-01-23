@@ -1,0 +1,22 @@
+ion-content{
+  --background:#e6e6e6;
+}
+.product-grid {
+    ion-row {
+      border-bottom: 1px solid #cecece; /* Aralarda çizgi ekleyen stil */
+    }
+  
+    .header-row {
+      font-weight: bold;
+      background-color: #f1f1f1; /* Başlık satırının arkaplan rengi */
+    }
+  
+    .data-row:hover {
+      background-color: #b1b1b1; /* Satıra hover olduğunda arkaplan rengi */
+    }
+  }
+ 
+  .title{
+    text-align: center;
+  }
+  

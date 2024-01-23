@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="submitForm()">Formu Gönder</ion-button>
+    </ion-buttons>
+    <ion-buttons></ion-buttons>
+    <ion-title style="text-align: center;">{{ modalTitle }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()">Kapat</ion-button>
+    </ion-buttons>
+    <!-- Move the submit button to the header -->
+ 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="submitForm()">
+    <ion-item>
+      <ion-label position="floating">Ürün İsmi</ion-label>
+      <ion-input [(ngModel)]="formData.name" name="name" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Stok</ion-label>
+      <ion-input [(ngModel)]="formData.stock" type="number"name="stock" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Kategori</ion-label>
+      <ion-select [(ngModel)]="formData.category" name="category" required>
+        <ion-select-option value="elektronik">Elektronik</ion-select-option>
+        <ion-select-option value="giyim">Giyim</ion-select-option>
+        <ion-select-option value="ev-ve-bahce">Ev ve Bahçe</ion-select-option>
+      </ion-select> 
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Ürün Açıklaması</ion-label>
+      <ion-input [(ngModel)]="formData.description" type="textarea" name="description"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="stacked">Ürün Resimleri</ion-label>
+      <ion-input type="file" (change)="onFileChange($event)" accept="image/*"></ion-input>
+    </ion-item>
+  </form>
+</ion-content>

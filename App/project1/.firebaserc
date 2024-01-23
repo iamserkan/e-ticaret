@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "project-d59c2": {
+      "hosting": {
+        "app": [
+          "project-d59c2"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "project-d59c2"
+  }
+}

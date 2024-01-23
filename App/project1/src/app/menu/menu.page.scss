@@ -1,9 +1,39 @@
-ion-menu::part(backdrop) {
-    background-color: rgba(59, 59, 59, 0.5);
+ion-toolbar{
+    text-align: center;
+}
+ion-content{
+    --background:#e6e6e6;
+}
+
+ion-card-subtitle{
+    text-align: center;
+    font-weight: 500;
+    color: black;
+}
+ion-card-content{
+    text-align: center;
+    font-weight: 500;
+    color: black;
+}
+ion-card-content ion-icon {
+    font-size: 3em; /* Adjust the size as needed */
   }
-  
-  ion-menu::part(container) {
-    border-radius: 0 20px 20px 0;
-  
-    box-shadow: 4px 0px 16px rgb(88, 88, 88);
-  }
+ion-card{
+    --background:#e6e6e6;
+    cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+ion-card:hover{
+    background-color: rgba(0, 0, 0, 0.1); /* Adjust the opacity or color as needed */
+
+}
+@media (max-width: 364px) {
+   .supplier{
+    height: 80%;
+   }
+    }
+    @media (max-width: 364px) {
+        .supplier{
+         height: 80%;
+        }
+         }
